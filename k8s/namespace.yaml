@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: orderflow
+  labels:
+    app.kubernetes.io/part-of: orderflow
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: orderflow-staging
+  labels:
+    app.kubernetes.io/part-of: orderflow
+    environment: staging

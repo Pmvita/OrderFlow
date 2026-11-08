@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: order-service-config
+  namespace: orderflow
+data:
+  LOG_LEVEL: "info"
+  SERVICE_PORT: "3000"
+  INVENTORY_SERVICE_URL: "http://inventory-service.orderflow.svc.cluster.local:80"
+  NOTIFICATION_SERVICE_URL: "http://notification-service.orderflow.svc.cluster.local:80"

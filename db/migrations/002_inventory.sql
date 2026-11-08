@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS inventory (
+  product_id TEXT PRIMARY KEY,
+  quantity_available INTEGER NOT NULL DEFAULT 0,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
