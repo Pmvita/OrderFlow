@@ -44,6 +44,24 @@ The project's focus is on **operational resilience**: services scale automatical
 
 > **Built for:** demonstrating cloud-agnostic, Kubernetes-native service decomposition — the same manifests run on EKS, GKE, AKS, or a local cluster with no code changes.
 
+## 📌 Project Status / MVP scope
+
+| Path | What it proves | Status |
+|---|---|---|
+| **Docker Compose e2e** | Multi-service API + Postgres locally (`docker compose up`, `scripts/e2e-compose.sh`) | Primary MVP verification path |
+| **Kubernetes manifests** | Deployments, Services, ConfigMaps, Secrets, Ingress, HPAs under `k8s/` | Code ready; apply needs a local/cluster kubecontext |
+| **Service mesh / Helm** | Istio/Linkerd, Helm charts | **Out of scope for MVP** — see Roadmap |
+
+MVP = compose e2e + unit tests + checked-in K8s manifests. Cluster load tests, mesh, and Helm are post-MVP.
+
+### MVP scope
+
+| Path | What it proves | Status |
+|---|---|---|
+| **Docker Compose e2e** | Multi-service order → inventory → notification flow on one machine | Primary local demo (`scripts/e2e-compose.sh`) |
+| **Kubernetes manifests** | Deployments, Services, probes, HPA, Ingress, rolling updates | Code ready; needs `kubectl` + cluster |
+| **Service mesh / Helm** | Istio/Linkerd, Helm charts | **Out of scope for MVP** — see Roadmap |
+
 ---
 
 ## ✨ Key Features
@@ -460,7 +478,7 @@ Each service defines its own `HorizontalPodAutoscaler` with independent min/max 
 
 ---
 
-## 🗺️ Roadmap
+## 🗺️ Roadmap (post-MVP — not required for portfolio MVP)
 
 - [ ] Add a service mesh (Istio/Linkerd) for mTLS + traffic policies between services
 - [ ] Centralized logging (EFK/Loki stack)

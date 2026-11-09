@@ -90,7 +90,7 @@ Progress tracker for the build. Check items off as you go.
 
 ---
 
-## 🗺️ Future / Roadmap (post-MVP)
+## 🗺️ Future / Roadmap (post-MVP — out of scope for portfolio MVP)
 - [ ] Add a service mesh (Istio/Linkerd) for mTLS + traffic policies
 - [ ] Centralized logging (EFK/Loki stack)
 - [ ] Distributed tracing (OpenTelemetry + Jaeger)
@@ -98,6 +98,8 @@ Progress tracker for the build. Check items off as you go.
 - [ ] GitOps deployment via ArgoCD/Flux
 - [ ] Network policies to restrict pod-to-pod traffic by default
 - [ ] Stronger saga/compensation for multi-item inventory (outbox / 2PC)
+
+**MVP boundary:** Compose e2e + raw K8s manifests are in scope. Mesh and Helm stay on the roadmap.
 
 ---
 
